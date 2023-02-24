@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CryptoOptionsComponent } from '../crypto-options/crypto-options.component';
 
 @Component({
   selector: 'app-home-page',

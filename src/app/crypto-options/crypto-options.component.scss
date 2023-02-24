@@ -1,0 +1,14 @@
+.currency-slider {
+	display: flex;
+}
+.tile {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	padding: 5px;
+	& img {
+		max-width: 15px;
+		max-height: 15px;
+		margin-right: 5px;
+	}
+}

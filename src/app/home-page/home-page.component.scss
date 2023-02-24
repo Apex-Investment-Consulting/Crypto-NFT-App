@@ -1,0 +1,37 @@
+.top-row {
+	display: flex;
+	padding: 0 15px;
+
+	.wallet-balance-panel {
+		.label {
+			color: #88878E;
+		}
+		.value {
+			font-size: 2em;
+		}
+	}
+	.plus-btn {
+		width: 4em;
+		height: 4em;
+		border-radius: 15px;
+		background-color: #fff;
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		div {
+			color: #000;
+			background: black;
+
+			&.horizontal-bar {
+				width: 70%;
+				height: 1px;
+			}
+			&.vertical-bar {
+				width: 1px;
+				height: 70%;
+			}
+		}
+	}
+}
