@@ -1,7 +1,13 @@
+.wrapper {
+	--top-row-height: 90px;
+}
 .top-row {
 	display: flex;
-	height: 90px;
-	position: relative;
+	height: var(--top-row-height, 90px);
+	position: fixed;
+	top: 0;
+	width: calc(100% - 16px);
+	background-color: black;
 
 	.wallet-balance-panel {
 		position: absolute;
@@ -32,6 +38,11 @@
 		align-items: center;
 		justify-content: center;
 	}
+}
+
+.content-area {
+	overflow: hidden;
+	margin-top: var(--top-row-height, 90px);
 }
 
 @keyframes spawn {
