@@ -15,7 +15,7 @@
 		left: 15px;
 		transform: translateY(-50%);
 		animation-duration: 1s;
-		animation-name: dropin;
+		animation-name: slidedown;
 		align-self: center;
 		.label {
 			color: #88878E;
@@ -59,7 +59,7 @@
   }
 }
 
-@keyframes dropin {
+@keyframes slidedown {
   from {
     opacity: 0;
     top: 20%;

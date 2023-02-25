@@ -1,7 +1,10 @@
 .nft-card {
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	display: flex;
 	flex-direction: column;
+	animation-duration: 1s;
+	animation-name: slideup;
+	animation-timing-function: ease-out;
 
 	img {
 		border-radius: 20px 20px 15px 15px;
@@ -29,4 +32,14 @@
 			margin-left: auto;
 		}
 	}
+}
+
+@keyframes slideup {
+  from {
+    margin-top: 50vh;
+  }
+
+  to {
+    margin-top: 0px;
+  }
 }
