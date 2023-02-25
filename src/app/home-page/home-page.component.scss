@@ -1,8 +1,16 @@
 .top-row {
 	display: flex;
-	padding: 0 15px;
+	height: 90px;
+	position: relative;
 
 	.wallet-balance-panel {
+		position: absolute;
+		top: 50%;
+		left: 15px;
+		transform: translateY(-50%);
+		animation-duration: 1s;
+		animation-name: dropin;
+		align-self: center;
 		.label {
 			color: #88878E;
 		}
@@ -11,13 +19,43 @@
 		}
 	}
 	.plus-btn {
+		animation-duration: 1s;
+		animation-name: spawn;
+		align-self: center;
 		width: 4em;
 		height: 4em;
 		border-radius: 15px;
 		background-color: #fff;
+		margin-right: 15px;
 		margin-left: auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
+}
+
+@keyframes spawn {
+  from {
+    width: 0em;
+    height: 0em;
+    margin-right: calc(2em + 15px);
+  }
+
+  to {
+    width: 4em;
+    height: 4em;
+    margin-right: 15px;
+  }
+}
+
+@keyframes dropin {
+  from {
+    opacity: 0;
+    top: 20%;
+  }
+
+  to {
+    opacity: 1;
+    top: 50%;
+  }
 }
