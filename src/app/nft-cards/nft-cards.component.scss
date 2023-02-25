@@ -1,0 +1,32 @@
+.nft-card {
+	margin-bottom: 5px;
+	display: flex;
+	flex-direction: column;
+
+	img {
+		border-radius: 20px 20px 15px 15px;
+	}
+	.base {
+		display: flex;
+		align-items: center;
+		padding: 20px 20px;
+		border-radius: 10px 10px 20px 20px;
+		background: #2D2D35;
+		margin-top: 2px;
+
+		.price-tag {
+			--logo-dimension: 25px;
+
+			display: flex;
+			align-items: center;
+
+			img {
+				max-width: var(--logo-dimension, 20px);
+				max-height: var(--logo-dimension, 20px);
+			}
+		}
+		.ticker {
+			margin-left: auto;
+		}
+	}
+}

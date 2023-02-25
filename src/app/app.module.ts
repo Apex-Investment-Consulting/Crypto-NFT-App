@@ -6,19 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CryptoOptionsComponent } from './crypto-options/crypto-options.component';
+import { NFTCardsComponent } from './nft-cards/nft-cards.component';
+import { StoreService } from './store.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    CryptoOptionsComponent
+    CryptoOptionsComponent,
+    NFTCardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    StoreService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

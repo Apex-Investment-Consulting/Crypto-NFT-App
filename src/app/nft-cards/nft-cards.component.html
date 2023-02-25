@@ -1,0 +1,14 @@
+<div >
+	<div
+		*ngFor="let NFT of NFTs;"
+		class="nft-card">
+		<img src="{{NFT.image}}">
+		<div class="base">
+			<div class="price-tag">
+				<img src="{{NFT.platformCurrencyImage}}">
+				<div>{{ NFT.priceInPlatformCurrency }}</div>
+			</div>
+			<div class="ticker">Ticker</div>
+		</div>
+	</div>
+</div>
