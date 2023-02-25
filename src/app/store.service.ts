@@ -46,11 +46,9 @@ export class StoreService {
   constructor(private http: HttpClient) { }
 
   getCurrencyLogoUrl(currencyName: string): string {
-    console.log(`lookup for ${currencyName}`);
     const matchedCurrency: CryptoCurrency = StoreService.cryptoCurrencyData.filter((currency: CryptoCurrency) => {
       return currency['name'].toLowerCase().indexOf(currencyName) !== -1;
     })[0] || StoreService.cryptoCurrencyData[0];
-    console.log(`matched logo: ${matchedCurrency['image']}`);
 
     return matchedCurrency['image'];
   }
@@ -59,7 +57,7 @@ export class StoreService {
     const queryParams = {
       vs_currency: 'usd',
       order: 'market_cap_desc',
-      per_page: 7,
+      per_page: 12,
       page: 1,
       sparkline: false
     };
@@ -68,8 +66,6 @@ export class StoreService {
       .pipe(
         map((data: object) => {
           return Object.keys(data).map(key => {
-            console.log('currency name');
-            console.log(data[key as keyof typeof data]['name']);
             return {
               name: data[key as keyof typeof data]['name'],
               image: data[key as keyof typeof data]['image']

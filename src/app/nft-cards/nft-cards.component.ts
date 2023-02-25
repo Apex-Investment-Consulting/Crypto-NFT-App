@@ -21,7 +21,6 @@ export class NFTCardsComponent {
       const id: string = NFTlistData ? NFTlistData[key as keyof typeof NFTlistData]['id'] : '';
       if(id) {
         const NFT: object = await this.getNFTMetatdataForCard(id).toPromise() || {};
-        console.log(NFT);
         let imageUrl: string = NFT['image'  as keyof typeof NFT]['small'];
         imageUrl = imageUrl.replace('/small/', '/large/');
         const name: string = NFT['name' as keyof typeof NFT];
@@ -36,8 +35,6 @@ export class NFTCardsComponent {
         });
       }
     }
-    console.log(`final NFTs`);
-    console.log(this.NFTs);
   }
 
   private getNFTMetatdataForCard(NFTid: string): Observable<object> {
@@ -46,7 +43,7 @@ export class NFTCardsComponent {
 
   private getNFTids(): Observable<object> {
     const queryParams = {
-      order: 'market_cap_usd_desc',
+      order: 'h24_volume_native_desc',
       per_page: 10,
       page: 1
     };

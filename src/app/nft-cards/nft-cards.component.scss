@@ -1,3 +1,6 @@
+.wrapper {
+	overflow: hidden;
+}
 .nft-card {
 	margin-bottom: 10px;
 	display: flex;
@@ -7,29 +10,32 @@
 	animation-timing-function: ease-out;
 
 	img {
-		border-radius: 20px 20px 15px 15px;
+		border-radius: 30px 30px 15px 15px;
 	}
 	.base {
 		display: flex;
 		align-items: center;
 		padding: 20px 20px;
-		border-radius: 10px 10px 20px 20px;
-		background: #2D2D35;
+		border-radius: 10px 10px 30px 30px;
+		background-color: #2D2D35;
 		margin-top: 2px;
 
 		.price-tag {
-			--logo-dimension: 25px;
+			--logo-dimension: 30px;
 
 			display: flex;
 			align-items: center;
+			font-size: 2em;
 
 			img {
 				max-width: var(--logo-dimension, 20px);
 				max-height: var(--logo-dimension, 20px);
+				margin-right: 10px;
 			}
 		}
 		.ticker {
 			margin-left: auto;
+			font-size: 1.5em;
 		}
 	}
 }

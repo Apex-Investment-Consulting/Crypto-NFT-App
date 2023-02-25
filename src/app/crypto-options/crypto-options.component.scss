@@ -1,14 +1,55 @@
+.wrapper {
+	margin-bottom: 1em;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+.slider-container {
+	overflow-x: auto;
+	position: relative;
+	height: 45px;
+	margin-bottom: 5px;
+}
 .currency-slider {
 	display: flex;
+	animation-duration: 20s;
+	animation-name: slidein;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	position: absolute;
+
+	&.forward {
+		animation-direction: normal;
+	}
+	&.backward {
+		animation-direction: reverse;
+	}
 }
 .tile {
+	&:active {
+		background-color: #bae399;
+	}
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
-	padding: 5px;
+	padding: 1em;
+	background-color: #2D2D35;
+	margin: 0px 2px;
+	border-radius: 15px;
+
 	& img {
 		max-width: 15px;
 		max-height: 15px;
 		margin-right: 5px;
 	}
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100%); 
+  }
 }
